@@ -1,0 +1,13 @@
+{% extends '@YosimitsoWorkingForum/Common/base.html.twig' %}
+{% block forum %}
+    {% include '@YosimitsoWorkingForum/Common/header.html.twig' %}
+{% trans_default_domain 'YosimitsoWorkingForumBundle' %}
+ <div id="wf_forum_content">
+     {% include '@YosimitsoWorkingForum/Common/breadcrumb.html.twig' with {} only %}
+    <div id="wf_forum">
+        {{ form_start(form) }}
+        {{ form_rest(form) }}
+        {{ form_end(form) }}
+   </div>
+ </div>
+{% endblock %}

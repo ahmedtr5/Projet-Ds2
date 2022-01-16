@@ -1,0 +1,14 @@
+language: php
+php:
+  - '7.4'
+
+before_install:
+  - nvm install 8.16.2
+
+install:
+  - composer install
+  - yarn install
+  - yarn run prod
+
+script:
+  - php ./vendor/phpunit/phpunit/phpunit --testsuite=unit
